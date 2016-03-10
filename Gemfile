@@ -26,6 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Session management system
 gem 'devise'
 
+# Admin system to manage models
+gem 'activeadmin', github: 'activeadmin'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

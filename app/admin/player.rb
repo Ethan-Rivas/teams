@@ -18,8 +18,8 @@ ActiveAdmin.register Player do
     f.inputs "Player Details" do
       f.input :first_name
       f.input :last_name
-      f.input :current_age
-      f.input :birthdate, :as => :datepicker
+      f.input :birthdate, as: :date_select, :start_year    => 1920,
+                                            :end_year      => Date.today.year
     end
     f.actions
   end

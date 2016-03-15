@@ -4,9 +4,10 @@ class Player < ActiveRecord::Base
   end
 
   def current_age
+    return 0 unless birthdate
+
     age = Date.today.year - birthdate.year
     age -= 1 unless has_birthday_this_year?
-
     age
   end
 

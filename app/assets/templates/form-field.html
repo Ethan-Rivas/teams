@@ -1,0 +1,33 @@
+<div ng-class="{ error: resource.errors[attribute] }">
+  <label>{{label}}</label>
+  <br />
+
+  <input type="text" class="form-control"
+    ng-model="resource.attributes[attribute]" ng-if="type=='text'" />
+
+  <textarea class="form-control" ng-model="resource.attributes[attribute]"
+    ng-if="type=='textarea'"></textarea>
+
+  <dropdown-selector ng-model="resource.attributes[attribute]"
+    options-service="optionsService" options-label="optionsLabel"
+    ng-if="type=='dropdown'"></dropdown-selector>
+
+    <div ng-if="type=='datepicker'">
+      <p class="input-group">
+        <input ng-model="resource.attributes[attribute]" type="text" class="form-control" uib-datepicker-popup="{{format}}"
+          is-open="calendarOpened">
+
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default" ng-click="openCalendar()">
+            <i class="glyphicon glyphicon-calendar"></i>
+          </button>
+        </span>
+      </p>
+    </div>
+
+  <ul ng-show="resource.errors[attribute]" class="errors">
+    <li ng-repeat="error in resource.errors[attribute]">
+      {{error}}
+    </li>
+  </ul>
+</div>

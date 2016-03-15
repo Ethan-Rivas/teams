@@ -11,4 +11,8 @@
 // about supported directives.
 //
 //= require angular.min.js
+//= require angular-resource.min.js
+//= require angular-route.min.js
+//= require angular-route-segment.min.js
+//= require ui-bootstrap-tpls-0.14.3.min.js
 //= require_tree .

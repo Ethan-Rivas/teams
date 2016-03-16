@@ -1,9 +1,18 @@
-<navigation-bar>
-  <ul class="log-menu">
-    <%= render 'devise/menu/registration_items' %>
-    <%= render 'devise/menu/login_items'%>
-  </ul>
-</navigation-bar>
+<% if user_signed_in? %>
+  <navigation-bar>
+    <ul class="log-menu">
+      <%= render 'devise/menu/registration_items' %>
+      <%= render 'devise/menu/login_items'%>
+    </ul>
+  </navigation-bar>
+<% else %>
+  <visitor-navigation-bar>
+    <ul class="log-menu">
+      <%= render 'devise/menu/registration_items' %>
+      <%= render 'devise/menu/login_items'%>
+    </ul>
+  </visitor-navigation-bar>
+<% end %>
 
 <div class="container">
   <div app-view-segment="0"></div>

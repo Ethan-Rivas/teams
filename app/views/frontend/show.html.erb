@@ -1,15 +1,12 @@
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Teams App</a>
-    </div>
+<navigation-bar>
+  <ul class="log-menu">
+    <%= render 'devise/menu/registration_items' %>
+    <%= render 'devise/menu/login_items'%>
+  </ul>
+</navigation-bar>
 
-    <ul class="nav navbar-nav navbar-left">
-      <li ng-class="{ active: ('players' | routeSegmentStartsWith) }">
-        <a href="#/players">Players</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<div class="container">
+  <div app-view-segment="0"></div>
+</div>
 
- <div app-view-segment="0"></div>
+<footer>Teams App - 2016</a></footer>

@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Desconectarse', destroy_user_session_path, class: 'btn btn-danger') %>
+  </li>
+<% else %>
+  <li>
+    <%= link_to('Iniciar Sesión', new_user_session_path, class: 'btn btn-info')  %>
+  </li>
+<% end %>

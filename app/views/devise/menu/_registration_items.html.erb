@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+  <li>
+    <%= link_to('Ajustes', edit_user_registration_path, class: 'btn btn-info') %>
+  </li>
+<% else %>
+    <li>
+  <%= link_to('Registro', new_user_registration_path, class: 'btn btn-primary')  %>
+  </li>
+<% end %>
